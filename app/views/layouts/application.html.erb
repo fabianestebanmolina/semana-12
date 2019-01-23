@@ -5,11 +5,42 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+        <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.2.1/sketchy/bootstrap.min.css" rel="stylesheet" integrity="sha384-Yr9hLdz4zKsdMcB2IUf0I2Y+KFalEfJez2d0H2rgQoAYjvm/mzbm2egxZ9Gc9kkg" crossorigin="anonymous">
+
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
   <body>
-    <%= yield %>
+
+    <nav class = "navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="#"> <font style = "vertical-align: inherit;"> <font style = "vertical-align: inherit;"> Semana12 </font> </font> </a>
+  <button class = "navbar-toggler" type = "button" data-toggle = "collapse" data-target = "# navbarColor01" aria-controls = "navbarColor01" aria-expand = "false" aria-label = "Toggle navigation ">
+    <span class = "navbar-toggler-icon"> </span>
+  </button>
+
+  <div class = "collapse navbar-collapse" id = "navbarColor01">
+    <ul class = "navbar-nav mr-auto">
+      <li class = "elemento de navegación activo">
+      </li>
+      <li class = "nav-item">
+        <a class="nav-link" href="<%= pages_about_path %>"> <font style = "vertical-align: inherit;"> <font style = "vertical-align: inherit;"> About </font> </font> </a>
+      </li>
+      <li class = "nav-item">
+        <a class="nav-link" href="<%= root_path  %>" <font style = "vertical-align: inherit;"> <font style = "vertical-align: inherit;"> Home </font> </font> </a>
+      </li>
+      <li class = "nav-item">
+        <a class="nav-link" <%= link_to'product',products_path%> <font style = "vertical-align: inherit;"> <font style = "vertical-align: inherit;"> </font> </ font > </a>
+      </li>
+    </ul>
+
+  </div>
+</nav>
+
+<div class="container">
+  <%= yield %>
+</div>
+
   </body>
 </html>
